@@ -24,6 +24,7 @@ start:
 
 	switch (tn)
 	{
+
 	case 3:
 	{
 		/*int x, y, p;
