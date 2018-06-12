@@ -63,6 +63,7 @@ start:
 			printf("");
 			printf("");
 
+			//colors
 
 		}
 	}
@@ -91,7 +92,43 @@ start:
 	break;
 	case 5:
 	{
-
+		int x, a, b, c;
+		x = 1 + rand() % 5;
+		switch (x)
+		{
+		case 1:
+			a = 6; b = 7, c = 8;
+			break;
+		case 2:
+			a = 7; b = 8; c = 9;
+			break;
+		case 3:
+			a = 6; b = 9; c = 10;
+			break;
+		case 4:
+			a = 6; b = 9; c = 8;
+			break;
+		case 5:
+			a = 7; b = 6; c = 10;
+			break;
+		}
+		printf("ваш набор #%d: %d %d %d\n\n", x, a, b, c);
+		
+		int a1, b1, c1;
+	again:
+		a1 = 6 + rand() % 5;
+		b1 = 6 + rand() % 5;
+		c1 = 6 + rand() % 5;
+		if (a1 != b1 != c1)
+		{
+			printf("мой набор: %d %d %d\n\n", a1, b1, c1);
+			if ((a + b + c) > (a1 + b1 + c1))
+				printf("You win!\n\n");
+			else if ((a + b + c) == (a1 + b1 + c1))
+				printf("draw\n\n");
+			else printf("Loser!\n\n");
+		}
+		else goto again;
 	}
 	break;
 	case 6:
