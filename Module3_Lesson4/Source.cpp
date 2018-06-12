@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<stdlib.h>
 #include<locale.h>
 #include<math.h>
@@ -30,7 +30,7 @@ start:
 	again:
 		printf("enter 2 numbers from 1 to 9:\n\n");
 		scanf("%d %d", &x, &y);
-		printf("ââåäèòå èõ ïðîèçâåäåíèå:\t");
+		printf("Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ñ… Ð¿Ñ€Ð¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ:\t");
 		scanf("%d", &p);
 		if (p == x*y) printf("\ntrue\n\n");
 		else printf("false, %d*%d=%d\n\n", x, y, x*y);
@@ -59,11 +59,11 @@ start:
 		else
 		{
 			printf("--------------------------------------------\n\n");
-			printf("Èòîãî ïðàâèëüíûõ: %d\n\n");
+			printf("Ð˜Ñ‚Ð¾Ð³Ð¾ Ð¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ñ‹Ñ…: %d\n\n");
 			printf("");
 			printf("");
 
-			//colors
+			//colors ///
 
 		}
 	}
@@ -75,18 +75,18 @@ start:
 		scanf("%d", &d);
 		printf("month:\t");
 		scanf("%d", &m);
-		if ((m == 3 && d > 21) || (m == 4 && d > 22)) printf("Îâåí\n\n");
-		else if ((m == 4 && d > 21) || (m == 5 && d < 22)) printf("Òåëåö\n\n");
-		else if ((m == 5 && d > 21) || (m == 6 && d < 22)) printf("Áëèçíåöû\n\n");
-		else if ((m == 6 && d > 21) || (m == 7 && d < 22)) printf("Ðàê\n\n");
-		else if ((m == 7 && d > 21) || (m == 8 && d < 22)) printf("Ëåâ\n\n");
-		else if ((m == 8 && d > 21) || (m == 9 && d < 22)) printf("Äåâà\n\n");
-		else if ((m == 9 && d > 21) || (m == 10 && d < 22)) printf("Âåñû\n\n");
-		else if ((m == 10 && d > 21) || (m == 11 && d < 22)) printf("Ñêîðïèîí\n\n");
-		else if ((m == 11 && d > 21) || (m == 12 && d < 22)) printf("Ñòðåëåö\n\n");
-		else if ((m == 12 && d > 21) || (m == 1 && d < 22)) printf("Êîçåðîã\n\n");
-		else if ((m == 1 && d > 21) || (m == 2 && d < 22)) printf("Âîäîëåé\n\n");
-		else if ((m == 2 && d > 21) || (m == 3 && d < 22)) printf("Ðûáû\n\n");
+		if ((m == 3 && d > 21) || (m == 4 && d > 22)) printf("ÐžÐ²ÐµÐ½\n\n");
+		else if ((m == 4 && d > 21) || (m == 5 && d < 22)) printf("Ð¢ÐµÐ»ÐµÑ†\n\n");
+		else if ((m == 5 && d > 21) || (m == 6 && d < 22)) printf("Ð‘Ð»Ð¸Ð·Ð½ÐµÑ†Ñ‹\n\n");
+		else if ((m == 6 && d > 21) || (m == 7 && d < 22)) printf("Ð Ð°Ðº\n\n");
+		else if ((m == 7 && d > 21) || (m == 8 && d < 22)) printf("Ð›ÐµÐ²\n\n");
+		else if ((m == 8 && d > 21) || (m == 9 && d < 22)) printf("Ð”ÐµÐ²Ð°\n\n");
+		else if ((m == 9 && d > 21) || (m == 10 && d < 22)) printf("Ð’ÐµÑÑ‹\n\n");
+		else if ((m == 10 && d > 21) || (m == 11 && d < 22)) printf("Ð¡ÐºÐ¾Ñ€Ð¿Ð¸Ð¾Ð½\n\n");
+		else if ((m == 11 && d > 21) || (m == 12 && d < 22)) printf("Ð¡Ñ‚Ñ€ÐµÐ»ÐµÑ†\n\n");
+		else if ((m == 12 && d > 21) || (m == 1 && d < 22)) printf("ÐšÐ¾Ð·ÐµÑ€Ð¾Ð³\n\n");
+		else if ((m == 1 && d > 21) || (m == 2 && d < 22)) printf("Ð’Ð¾Ð´Ð¾Ð»ÐµÐ¹\n\n");
+		else if ((m == 2 && d > 21) || (m == 3 && d < 22)) printf("Ð Ñ‹Ð±Ñ‹\n\n");
 		else printf("\nenter valid date of birth\n\n");
 	}
 	break;
@@ -112,7 +112,7 @@ start:
 			a = 7; b = 6; c = 10;
 			break;
 		}
-		printf("âàø íàáîð #%d: %d %d %d\n\n", x, a, b, c);
+		printf("Ð²Ð°Ñˆ Ð½Ð°Ð±Ð¾Ñ€ #%d: %d %d %d\n\n", x, a, b, c);
 		
 		int a1, b1, c1;
 	again:
@@ -121,7 +121,7 @@ start:
 		c1 = 6 + rand() % 5;
 		if (a1 != b1 != c1)
 		{
-			printf("ìîé íàáîð: %d %d %d\n\n", a1, b1, c1);
+			printf("Ð¼Ð¾Ð¹ Ð½Ð°Ð±Ð¾Ñ€: %d %d %d\n\n", a1, b1, c1);
 			if ((a + b + c) > (a1 + b1 + c1))
 				printf("You win!\n\n");
 			else if ((a + b + c) == (a1 + b1 + c1))
