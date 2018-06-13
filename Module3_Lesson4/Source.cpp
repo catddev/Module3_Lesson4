@@ -30,14 +30,13 @@ start:
 	case 3:
 	{
 		/*int x, y, p;
-	again:
+
 		printf("enter 2 numbers from 1 to 9:\n\n");
 		scanf("%d %d", &x, &y);
 		printf("введите их произведение:\t");
 		scanf("%d", &p);
 		if (p == x*y) printf("\ntrue\n\n");
-		else printf("false, %d*%d=%d\n\n", x, y, x*y);
-		goto again;*/
+		else printf("false, %d*%d=%d\n\n", x, y, x*y);*/
 
 		//3.	Необходимо написать программу, которая проверяет пользователя на знание таблицы умножения. 
 		//Пользователь сам вводит два целых однозначных числа. Программа задаёт вопрос: результат умножения
