@@ -4,16 +4,18 @@
 #include<math.h>
 #include<time.h>
 #include <Windows.h>
-#include <conio.h>
+#include <iostream>
+
+using namespace std;
 
 void main()
 {
-
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
 	srand(time(NULL));
 
 	setlocale(LC_ALL, "Rus");
+
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(hConsole, 15);
 
 	int tn = 0;
 
@@ -37,18 +39,21 @@ start:
 		else printf("false, %d*%d=%d\n\n", x, y, x*y);
 		goto again;*/
 
-		int a, b;
+		//3.	Необходимо написать программу, которая проверяет пользователя на знание таблицы умножения. 
+		//Пользователь сам вводит два целых однозначных числа. Программа задаёт вопрос: результат умножения
+		//первого числа на второе. Пользователь должен ввести ответ и увидеть на экране правильно 
+		//он ответил или нет. Если нет – показать еще и правильный результат
+		int a = 0, b = 0;
+		int countTrue = 0, countFalse = 0, numExam = 1;
+		int result = 0;
 	start2:
 		a = 1 + rand() % 9;
 		b = 1 + rand() % 9;
-		
-		int mresult = a*b;
-		int result = 0;
-		int countTrue = 0, countFalse = 0, numExam = 1;
-		printf("a=%d b=%d\n\n", a, b);
-		printf("a*b=");
+
+		printf("%d) %d * %d = ", numExam, a, b);
 		scanf("%d", &result);
-		
+
+		int mresult = a*b;
 		if (result == mresult)
 			countTrue++;
 		else
@@ -59,13 +64,16 @@ start:
 			goto start2;
 		else
 		{
-			printf("--------------------------------------------\n\n");
-			printf("Итого правильных: %d\n\n");
-			printf("");
-			printf("");
+			printf("-----------------------------------\n");
 
-			//colors ///
-
+			printf("Итого правильных ");
+			SetConsoleTextAttribute(hConsole, 2);
+			printf("%d", countTrue);
+			SetConsoleTextAttribute(hConsole, 15);
+			printf(", неправильных ");
+			SetConsoleTextAttribute(hConsole, 4);
+			printf("%d\n\n", countFalse);
+			SetConsoleTextAttribute(hConsole, 15);
 		}
 	}
 		break;
